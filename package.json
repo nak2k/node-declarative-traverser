@@ -1,0 +1,34 @@
+{
+  "name": "declarative-traverser",
+  "version": "0.0.1",
+  "description": "Traverse data declaratively",
+  "author": "Kengo Nakatsuka <kengo.nakatsuka@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/nak2k/node-declarative-traverser/issues"
+  },
+  "dependencies": {
+    "callbackify3": "0.0.1",
+    "chalk": "^2.4.1"
+  },
+  "devDependencies": {
+    "tape": "^4.9.1"
+  },
+  "homepage": "https://github.com/nak2k/node-declarative-traverser",
+  "keywords": [
+    "traverser"
+  ],
+  "license": "MIT",
+  "main": "lib",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nak2k/node-declarative-traverser.git"
+  },
+  "scripts": {
+    "prepublishOnly": "npm test",
+    "test": "tape test/test*.js"
+  },
+  "files": [
+    "README.md",
+    "lib/"
+  ]
+}
