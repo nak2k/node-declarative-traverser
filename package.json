@@ -1,6 +1,6 @@
 {
   "name": "declarative-traverser",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Traverse data declaratively",
   "author": "Kengo Nakatsuka <kengo.nakatsuka@gmail.com>",
   "bugs": {
