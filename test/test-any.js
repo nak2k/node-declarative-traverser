@@ -6,7 +6,7 @@ const {
   makeTraverser,
 } = require('..');
 
-test('test ANY', t => {
+test('test ANY property', t => {
   t.plan(12);
 
   const schema = {
@@ -46,5 +46,30 @@ test('test ANY', t => {
     t.deepEqual(context.errors, []);
     t.equal(data.foo, true);
     t.equal(data.bar, 2);
+  });
+});
+
+test('test ANY type', t => {
+  t.plan(2);
+
+  const schema = {
+    [ANY]: {
+      [TYPE]: ANY,
+    },
+  };
+
+  const traverser = makeTraverser(schema, {});
+
+  const data = {
+    foo: {
+      x: 1,
+    },
+    bar: 1,
+    baz: true,
+  };
+
+  traverser(data, (err, context) => {
+    t.error(err);
+    t.deepEqual(context.errors, []);
   });
 });
