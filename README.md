@@ -22,7 +22,7 @@ const schema = {
     bar: {
       baz: {
         [TYPE]: String,
-        [TRAEVERSER]: async (dataRef, context) => {
+        [TRAVERSER]: async (dataRef, context) => {
           context.baz = dataRef.data;
         },
       },
