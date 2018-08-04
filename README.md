@@ -49,6 +49,51 @@ traverser(data, (err, context) => {
 });
 ```
 
+## API
+
+### makeTraverser(schema, options = {})
+
+Make a traverser from the specified schema.
+
+- `schema`
+  - An object that defines a structure of data to be traversed.
+- `options.commandMap`
+  - An object that defines additional commands.
+  - A key of this object must be a symbol to identify a command.
+  - A value of this object must be a function that has arguments `(schemaRef, options)`.
+- `options.schemaMap`
+
+This function returns the following function:
+
+``` javascript
+traverser(data, [context, ]callback)
+```
+
+- `data`
+  - An object to be traversed.
+- `context`
+- `callback(err, context)`
+
+## Concepts
+
+### Schema
+
+### Command
+
+### Traverser
+
+### DataRef
+
+### Context
+
+### SchemaRef
+
+## Commands
+
+### TYPE
+
+### CASE
+
 ## License
 
 MIT
