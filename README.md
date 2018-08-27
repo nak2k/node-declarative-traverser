@@ -5,7 +5,7 @@ Traverse data declaratively.
 ## Installation
 
 ```
-npm i declarative-traverser -S
+npm i declarative-traverser
 ```
 
 ## Usage
@@ -72,7 +72,10 @@ traverser(data, [context, ]callback)
 - `data`
   - An object to be traversed.
 - `context`
+  - An object that is shared in traversers while data are being traversed.
+  - If this argument is omitted, the default value is `{}`.
 - `callback(err, context)`
+  - A function that is called when traversing is completed or an error occurs.
 
 ## Concepts
 
